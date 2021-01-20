@@ -1,0 +1,46 @@
+CREATE TABLE `lab3`.`user` 
+( `ID` INT NOT NULL AUTO_INCREMENT ,
+ `email` VARCHAR(255) NOT NULL ,
+ `name` VARCHAR(255) NOT NULL , 
+`password` VARCHAR(32) NOT NULL ,
+ `registration_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+PRIMARY KEY (`ID`), UNIQUE (`email`)) ENGINE = InnoDB;
+
+CREATE TABLE `lab3`.`department` 
+( `ID` INT NOT NULL AUTO_INCREMENT , 
+`name` VARCHAR(255) NOT NULL , 
+`description` TEXT NOT NULL , 
+PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+
+INSERT INTO `department` 
+(`ID`, `name`, `description`)
+ VALUES (NULL, 'Science Department', 
+'The mission of the Science Department is to present science as a rational and 
+systematic observation, identification, description, experimental investigation,
+ and theoretical explanation 
+of natural phenomena.')
+
+INSERT INTO `department` 
+(`ID`, `name`, `description`) 
+VALUES (NULL, 'Physical Sciences Department', 
+'Physical Sciences provides the foundation courses needed to transfer into four-year programs in chemistry, engineering, earth and planetary science or physics.
+ Studies in the physical sciences also lead to life science programs such as medicine, dentistry, physical therapy and pharmacy, 
+as well as astronomy, meteorology, geology, and environmental chemistry.')
+
+
+INSERT INTO `department` (`ID`, `name`, `description`) 
+VALUES (NULL, 'Marketing Department', 'A marketing department promotes your business and drives sales of its products or services.
+ It provides the necessary research to identify your target customers and other audiences. Depending on the company’s hierarchical organization,
+ a marketing director, manager or vice president of marketing might be at the helm. In some businesses,
+ a vice president of sales and marketing oversees both the marketing and sales departments with a strong manager leading each department.')
+
+
+INSERT INTO `department` (`ID`, `name`, `description`) 
+VALUES (NULL, 'Finance department', 'Finance is one of the major pillars of any organisation and an essential ingredient to a successful business. Nowadays,
+ a finance department has a broad range of roles to carry out within or outside an organization.
+ The performance and success of any company greatly depend on how well the finance is handled. Keeping a close watch on the financing function is very important for the smooth operation 
+of a company.'),
+ (NULL, 'Electrical department', 'Electrical engineers design, develop, and test electrical devices and equipment, 
+including communications systems, power generators, motors and navigation systems, and electrical systems for automobiles and aircraft.
+ They also oversee the manufacture of these devices, systems, and equipment.')
